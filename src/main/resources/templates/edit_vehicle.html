@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8">
-    <title>Driver Management </title>
+    <title>Vehicle Management </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
      
     
@@ -21,12 +21,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Drivers Management System</a>
+      <a class="navbar-brand" href="#">Vehicle Management System</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a th:href="@{/drivers}">Driver Management</a></li>
+        <li><a th:href="@{/drivers}">Vehicle Management</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -39,33 +39,78 @@
 <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
-                <h1 class="text-center">Update Driver</h1>
+                <h1 class="text-center">Update Vehicle</h1>
                 <!-- The following line was corrected -->
                 <div class="card-body"></div>
               
-                <form th:action="@{/drivers/{id}(id=${driver.id})}"th:object="${driver}" method="post">
+                <form th:action="@{/vehicles/{id}(id=${vehicle.id})}"th:object="${vehicle}" method="post">
                     <div class="form-group">
-                        <label>Driver First Name</label>
+                        <label>Registration Number</label>
                         <input 
                             type="text"
-                            name="firstname"
-                          th:field="*{firstname}"
+                            name="VehicleNo"
+                          th:field="*{VehicleNo}"
                             class="form-control"
-                            placeholder="Enter Driver's first name"
+                            placeholder="Enter vehicle licence plate"
                         />
                     </div>
 
                     <div class="form-group">
-                        <label>Driver Last Name</label>
+                        <label>Location</label>
                         <input 
                             type="text"
-                            name="lastname"
-                         th:field="*{lastname}"
+                            name="VehicleLocation"
+                         th:field="*{VehicleLocation}"
                             class="form-control"
-                            placeholder="Enter Driver's last name"
+                            placeholder="Enter vehicle location"
                         />
                     </div>
-
+                    
+                         <div class="form-group">
+                        <label>Status</label>
+                        <input 
+                            type="text"
+                            name="VehicleStatus"
+                         th:field="*{VehicleStatus}"
+                            class="form-control"
+                            placeholder="Enter vehicle Status"
+                        />
+                    </div>
+                    
+                       <div class="form-group">
+                        <label>Vendor</label>
+                        <input 
+                            type="text"
+                            name="VehicleVendor"
+                         th:field="*{VehicleVendor}"
+                            class="form-control"
+                            placeholder="Enter vehicle vendor"
+                        />
+                    </div>
+                    
+                     <div class="form-group">
+                        <label>Manufacturer</label>
+                        <input 
+                            type="text"
+                            name="VehicleManufacturer"
+                         th:field="*{VehicleManufacturer}"
+                            class="form-control"
+                            placeholder="Enter vehicle vendor"
+                        />
+                    </div>
+                    
+                      <div class="form-group">
+                        <label>Model</label>
+                        <input 
+                            type="text"
+                            name="VehicleModel"
+                         th:field="*{VehicleModel}"
+                            class="form-control"
+                            placeholder="Enter vehicle model"
+                        />
+                    </div>
+                    
+                    
                     <div class="box-footer">
                         <button type="submit" class="btn btn-primary">
                             Submit

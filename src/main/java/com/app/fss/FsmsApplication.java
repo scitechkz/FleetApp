@@ -20,12 +20,8 @@ public class FsmsApplication implements CommandLineRunner{
 //	//this parts add new drivers
 	@Override
 public void run(String... args) throws Exception{
-//		Driver driver1 = new Driver("Kazeem","Fadipe");
-//		driverRepository.save(driver1);
 //		
-//		Driver driver2 = new Driver("Ifeoluwa","Darasimi");
-//		driverRepository.save(driver2);
-
 	
 }
+	
 }

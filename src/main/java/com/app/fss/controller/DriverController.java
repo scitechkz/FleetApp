@@ -61,7 +61,7 @@ public String editDriverForm(@PathVariable Long id, Model model) {
 public String updateDriver(@PathVariable Long id,
 		@ModelAttribute("driver") Driver driver,
 		Model model) {
-	// get drivers  from databse by Id;
+	// get drivers  from database by Id;
 	Driver existingDriver = driverService.getDriverById(id);
 	existingDriver.setId(id);
 	existingDriver.setFirstname(driver.getFirstname());
