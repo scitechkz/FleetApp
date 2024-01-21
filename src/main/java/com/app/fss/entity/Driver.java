@@ -19,6 +19,19 @@ public class Driver {
 	
 	@Column(name="last_name")
 	private String lastname;
+	
+	@Column(name="phoneNo")
+	private String PhoneNo;
+	
+	@Column(name="address")
+	private String Address;
+	
+	@Column(name="licence")
+	private String Licence;
+	
+	@Column(name="issuanceDate")
+	private String IssuanceDate;
+	
 	//default constructor must be created after generating constructor -9 to 11
 	
 
@@ -27,30 +40,87 @@ public class Driver {
 		
 	}
 	
-	public Driver(String firstname, String lastname) {
+	public Driver(String firstname, String lastname,String PhoneNo,String Address,String Licence,String IssuanceDate) {
 		super();
 		this.firstname = firstname;
 		this.lastname = lastname;
+		this.PhoneNo = PhoneNo;
+		this.Address = Address;
+		this.IssuanceDate = IssuanceDate;
+		
 	}
+	
+	//set setters
+	
 	public long getId() {
 		return id;
 	}
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getFirstname() {
-		return firstname;
-	}
+	
+	
+	
+	
 	public void setFirstname(String firstname) {
 		this.firstname = firstname;
 	}
-	public String getLastname() {
-		return lastname;
-	}
+
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
 
+	public void setPhoneNo(String PhoneNo) {
+		this.PhoneNo = PhoneNo ;
+	}
+	
+	public void setAddress(String Address) {
+		this.Address = Address ;
+	}
+	
+	public void setLicence(String Licence) {
+		this.Licence = Licence ;
+	}
+	
+	
+	
+	public void setIssuanceDate(String IssuanceDate) {
+		this.IssuanceDate = IssuanceDate ;
+	}
+	
+	
+	
+	
+	
+	
+	public String getFirstname() {
+		return firstname;
+	}
+	
+	public String getLastname() {
+		return lastname;
+	}
+	
+	
+	public String getPhoneNo() {
+		return PhoneNo;
+	}
+	
+	public String getAddress() {
+		return Address;
+	}
+	
+	public String getLicence() {
+		return Licence;
+	}
+	
+	public String getIssuanceDate() {
+		return IssuanceDate;
+	}
+	
+	
+	
+	
 	
 	
 	

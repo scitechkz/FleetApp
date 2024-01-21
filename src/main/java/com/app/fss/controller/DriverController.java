@@ -40,7 +40,7 @@ public class DriverController {
 	Driver driver = new Driver();
 	model.addAttribute("driver", driver);
 	return "create_driver" ;
-		
+		//returns create_driver.html
 	}
 
 @PostMapping("/drivers")
@@ -57,6 +57,7 @@ public String editDriverForm(@PathVariable Long id, Model model) {
 	return "edit_driver";
 }
 
+//updates the drivers table
 @PostMapping("/drivers/{id}")	
 public String updateDriver(@PathVariable Long id,
 		@ModelAttribute("driver") Driver driver,
@@ -66,13 +67,15 @@ public String updateDriver(@PathVariable Long id,
 	existingDriver.setId(id);
 	existingDriver.setFirstname(driver.getFirstname());
 	existingDriver.setLastname(driver.getLastname());
+	existingDriver.setPhoneNo(driver.getPhoneNo());
+	existingDriver.setAddress(driver.getAddress());
+	existingDriver.setIssuanceDate(driver.getIssuanceDate());
     //save updated driver
 	driverService.updateDriver(existingDriver);
 	return "redirect:/drivers";
 }
 
 //Handler method to handle driver delete request
-
 @GetMapping("/drivers/{id}")
 public String deleteDriver(@PathVariable Long id) {
 	driverService.deleteDriverById(id);
